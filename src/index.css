@@ -29,6 +29,5 @@ html, body {
 
 .main-container {
   max-width: 1290px;
-  margin: 21px 76px;
-
+  margin: 21px 76px 21px 76px;
 }
