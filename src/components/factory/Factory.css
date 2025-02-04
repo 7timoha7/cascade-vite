@@ -1,0 +1,23 @@
+.card {
+  max-width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-img {
+  max-height: 80px;
+}
+
+.icon-text1 {
+  font-size: 15px;
+}
+
+.icon-text2 {
+  font-size: 40px;
+  margin-top: auto;
+}
+
+.icon-text2-span {
+  font-size: 20px;
+}
