@@ -31,7 +31,7 @@ function App() {
 
         <Shells/>
 
-        <div style={{display: 'flex', flexDirection: 'column'}}>
+        <div style={{display: 'flex', flexDirection: 'column', background: '#F1F2F6', marginTop: '80px'}}>
           <div className={'main-container'} style={{marginTop: 'auto'}}>
             <Footer/>
           </div>
