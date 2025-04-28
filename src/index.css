@@ -37,3 +37,7 @@ html, body {
   width: 100%;
   text-align: center;
 }
+
+.container-1290 {
+  max-width: 1290px;
+}
