@@ -8,7 +8,7 @@ import './Factory.css'
 
 const Factory = () => {
   return (
-    <div style={{border: '1px solid blue', flex: 1}}>
+    <div style={{flex: 1}}>
       <img style={{width: '100%'}} src={imgFactory} alt="factory"/>
       <div style={{display: 'flex', flexDirection: 'column'}}>
         <div className={'main-container'}

@@ -1,0 +1,8 @@
+.waterfallBackground {
+  /*background-image: url("../../assets/images/ourProducts/waterfall1.svg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+  background-size: contain;
+  width: 100%;
+  min-height: 450px;
+}
