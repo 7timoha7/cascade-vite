@@ -15,7 +15,7 @@ const Header = () => {
       }
     };
 
-    handleResize(); // вызвать сразу при загрузке
+    handleResize();
 
     window.addEventListener('resize', handleResize);
 
