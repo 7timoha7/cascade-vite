@@ -7,23 +7,51 @@ import technologiesIcon4 from '../../assets/images/ourProducts/technologies-icon
 import technologiesIcon5 from '../../assets/images/ourProducts/technologies-icon5.svg'
 import technologiesIcon6 from '../../assets/images/ourProducts/technologies-icon6.svg'
 import img from "../../assets/images/ourProducts/img2.svg";
+import {useEffect, useState} from "react";
 
 const OurProducts = () => {
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    };
+
+    handleResize(); // вызвать сразу при загрузке
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
 
-    <div style={{borderTop: '1px solid #727376',}}>
+    <div id="about-us" style={{borderTop: '1px solid #727376',}}>
 
       <div style={{flex: 1}}>
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <div className={`main-container`}>
-            <img src={imgLogo} alt="cascade"/>
-            <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-              <p style={{maxWidth: '860px', fontSize: '24px', textAlign: 'left'}}>
+            <img style={{maxWidth: !isMobile ? '150px' : '100%'}} src={imgLogo} alt="cascade"/>
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              alignItems: 'center',
+              paddingLeft: '10px',
+              paddingRight: '10px'
+            }}>
+              <p style={{maxWidth: '860px', fontSize: isMobile ? '24px' : '14px', textAlign: 'left'}}>
                 Завод занимает площадь 60 000 кв. м и специализируется на производстве и продаже керамических унитазов,
                 раковин и продукции для общественных ванных комнат.
               </p>
 
-              <p style={{maxWidth: '860px', fontSize: '24px', textAlign: 'left'}}>
+              <p style={{maxWidth: '860px', fontSize: isMobile ? '24px' : '14px', textAlign: 'left'}}>
                 Производственный комплекс включает завод по изготовлению фарфоровой глины и литейный цех, а также
                 оснащён
                 высокотехнологичными туннельными и компьютеризированными печами. Мощная производственная база и
@@ -41,7 +69,7 @@ const OurProducts = () => {
           <img style={{width: '100%'}} src={img} alt="2"/>
           <div className={`main-container waterfallBackground`}>
             <div>
-              <div style={{
+              <div id="products" style={{
                 textAlign: 'center',
                 fontSize: '36px',
                 display: 'flex',
@@ -49,8 +77,13 @@ const OurProducts = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <p style={{margin: 0, paddingBottom: '25px'}}>НАША ПРОДУКЦИЯ</p>
-                <p style={{borderTop: '2px solid #727376', margin: 0, padding: '28px 150px'}}>УНИТАЗЫ</p>
+                <p style={{fontSize: isMobile ? '36px' : '18px', margin: 0, paddingBottom: '25px'}}>НАША ПРОДУКЦИЯ</p>
+                <p style={{
+                  fontSize: isMobile ? '36px' : '18px',
+                  borderTop: '2px solid #727376',
+                  margin: 0,
+                  padding: '28px 150px'
+                }}>УНИТАЗЫ</p>
               </div>
 
               <div style={{
@@ -63,7 +96,7 @@ const OurProducts = () => {
                     display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', fontSize: '12px', gap: '15px',
                     padding: '20px'
                   }}>
-                  <div style={{maxWidth: '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon1} alt="cascade-technologies"/>
                     </div>
@@ -75,7 +108,7 @@ const OurProducts = () => {
                       безопасно, тихо и удобно
                     </p>
                   </div>
-                  <div style={{maxWidth: '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon2} alt="cascade-technologies"/>
                     </div>
@@ -87,7 +120,7 @@ const OurProducts = () => {
                       и беспрепятственным
                     </p>
                   </div>
-                  <div style={{maxWidth: '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon3} alt="cascade-technologies"/>
                     </div>
@@ -98,7 +131,7 @@ const OurProducts = () => {
                     </p>
                   </div>
 
-                  <div style={{maxWidth: '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon4} alt="cascade-technologies"/>
                     </div>
@@ -110,7 +143,7 @@ const OurProducts = () => {
                       блеск и чистоту
                     </p>
                   </div>
-                  <div style={{maxWidth: '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon5} alt="cascade-technologies"/>
                     </div>
@@ -125,7 +158,7 @@ const OurProducts = () => {
 
                     </p>
                   </div>
-                  <div style={{maxWidth: '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon6} alt="cascade-technologies"/>
                     </div>

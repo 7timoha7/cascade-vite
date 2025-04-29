@@ -5,9 +5,32 @@ import img3 from '../../assets/images/Sgells/HangingSinks/3.svg'
 import img4 from '../../assets/images/Sgells/HangingSinks/4.svg'
 import img5 from '../../assets/images/Sgells/HangingSinks/5.svg'
 import img6 from '../../assets/images/Sgells/HangingSinks/6.svg'
+import {useEffect, useState} from "react";
 
 
 const HangingSinks = () => {
+
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    };
+
+    handleResize(); // вызвать сразу при загрузке
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
     <div style={{
       display: 'flex',
@@ -24,7 +47,7 @@ const HangingSinks = () => {
         {/* Заголовок */}
         <div style={{textAlign: 'center', marginBottom: '30px'}}>
           <p style={{
-            fontSize: '36px',
+            fontSize: !isMobile ? '18px' : '36px',
             padding: '15px 50px',
             borderBottom: '1px solid #727376',
             display: 'inline-block'
@@ -62,8 +85,8 @@ const HangingSinks = () => {
           <div style={{
             flex: '1 1 500px',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: '20px',
+            gridTemplateColumns: !isMobile ? 'repeat(auto-fit, minmax(170px, 1fr))' : 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: !isMobile ? '12px' : '20px',
           }}>
             {[
               {src: img1, name: 'GX-18004'},

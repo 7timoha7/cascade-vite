@@ -5,8 +5,31 @@ import HangingSinks from "./HangingSinks.tsx";
 import FreestandingSinks from "./FreestandingSinks.tsx";
 import InsetSinks from "./InsetSinks.tsx";
 import TabletopSinks from "./TabletopSinks.tsx";
+import {useEffect, useState} from "react";
 
 const Shells = () => {
+
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    };
+
+    handleResize(); // вызвать сразу при загрузке
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
     <div>
       <div style={{
@@ -24,7 +47,7 @@ const Shells = () => {
           {/* Заголовок */}
           <div style={{textAlign: 'center', marginBottom: '30px'}}>
             <p style={{
-              fontSize: '36px',
+              fontSize: !isMobile ? '18px' : '36px',
               padding: '15px 50px',
               borderBottom: '1px solid #727376',
               display: 'inline-block'
@@ -49,7 +72,15 @@ const Shells = () => {
       <HangingSinks/>
 
       <div style={{display: 'flex', justifyContent: 'center', marginTop: '90px'}}>
-        <img style={{maxWidth: '712px'}} src={img3} alt="cascade"/>
+        <img
+          style={{
+            width: '100%',
+            maxWidth: '712px',
+            height: 'auto', // чтобы сохранять пропорции
+          }}
+          src={img3}
+          alt="cascade"
+        />
       </div>
 
       <FreestandingSinks/>

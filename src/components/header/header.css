@@ -2,3 +2,18 @@
   text-decoration: none;
   color: black;
 }
+
+
+/* styles.css */
+.title {
+  font-size: 36px;
+  padding: 15px 50px;
+  border-bottom: 1px solid #727376;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 12px;
+  }
+}

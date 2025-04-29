@@ -38,6 +38,14 @@ html, body {
   text-align: center;
 }
 
+.main-container2 {
+  max-width: 1290px;
+  margin: 21px 25px 21px 25px;
+  align-self: center;
+  width: 100%;
+
+}
+
 .container-1290 {
   max-width: 1290px;
 }

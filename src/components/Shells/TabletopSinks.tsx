@@ -37,9 +37,30 @@ import img5_3 from '../../assets/images/Sgells/TabletopSinks/5-3.svg'
 import img5_4 from '../../assets/images/Sgells/TabletopSinks/5-4.svg'
 import img5_5 from '../../assets/images/Sgells/TabletopSinks/5-5.svg'
 import img5_6 from '../../assets/images/Sgells/TabletopSinks/5-6.svg'
+import {useEffect, useState} from "react";
 
 
 const TabletopSinks = () => {
+
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    };
+
+    handleResize(); // вызвать сразу при загрузке
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div style={{
       display: 'flex',
@@ -56,7 +77,7 @@ const TabletopSinks = () => {
         {/* Заголовок */}
         <div style={{textAlign: 'center', marginBottom: '30px'}}>
           <p style={{
-            fontSize: '36px',
+            fontSize: !isMobile ? '18px' : '36px',
             padding: '15px 50px',
             borderBottom: '1px solid #727376',
             display: 'inline-block'
@@ -94,8 +115,8 @@ const TabletopSinks = () => {
           <div style={{
             flex: '1 1 500px',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: '20px',
+            gridTemplateColumns: !isMobile ? 'repeat(auto-fit, minmax(170px, 1fr))' : 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: !isMobile ? '12px' : '20px',
           }}>
             {[
               {src: img1_1, name: 'Grey'},
@@ -161,8 +182,8 @@ const TabletopSinks = () => {
           <div style={{
             flex: '1 1 500px',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: '20px',
+            gridTemplateColumns: !isMobile ? 'repeat(auto-fit, minmax(170px, 1fr))' : 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: !isMobile ? '12px' : '20px',
           }}>
             {[
               {src: img2_1, name: 'Grey'},
@@ -226,8 +247,8 @@ const TabletopSinks = () => {
           <div style={{
             flex: '1 1 500px',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: '20px',
+            gridTemplateColumns: !isMobile ? 'repeat(auto-fit, minmax(170px, 1fr))' : 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: !isMobile ? '12px' : '20px',
           }}>
             {[
               {src: img3_1, name: 'Pink'},
@@ -292,8 +313,8 @@ const TabletopSinks = () => {
           <div style={{
             flex: '1 1 500px',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: '20px',
+            gridTemplateColumns: !isMobile ? 'repeat(auto-fit, minmax(170px, 1fr))' : 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: !isMobile ? '12px' : '20px',
           }}>
             {[
               {src: img4_1, name: 'GX-21009'},
@@ -357,8 +378,8 @@ const TabletopSinks = () => {
           <div style={{
             flex: '1 1 500px',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: '20px',
+            gridTemplateColumns: !isMobile ? 'repeat(auto-fit, minmax(170px, 1fr))' : 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: !isMobile ? '12px' : '20px',
           }}>
             {[
               {src: img5_1, name: 'GX-21126'},
@@ -393,8 +414,6 @@ const TabletopSinks = () => {
             ))}
           </div>
         </div>
-
-
       </div>
 
 

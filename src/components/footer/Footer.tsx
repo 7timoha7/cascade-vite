@@ -4,7 +4,7 @@ import imgInsta from '../../assets/images/Footer/instagram.svg';
 
 const Footer = () => {
   return (
-    <div style={{display: 'flex', justifyContent: 'center'}}>
+    <div id="contacts" style={{display: 'flex', justifyContent: 'center'}}>
       <footer style={{
         display: 'flex',
         flexDirection: 'column',

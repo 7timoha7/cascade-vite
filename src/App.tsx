@@ -6,6 +6,7 @@ import OurProducts from "./components/ourProducts/OurProducts.tsx";
 import WallHungToilets from "./components/Toilets/WallHungToilets/WallHungToilets.tsx";
 import FloorStandingToilets from "./components/Toilets/FloorStandingToilets/FloorStandingToilets.tsx";
 import Shells from "./components/Shells/Shells.tsx";
+import ScrollTop from "./components/ScrollTop/ScrollTop.tsx";
 
 function App() {
 
@@ -38,6 +39,8 @@ function App() {
         </div>
 
       </div>
+
+      <ScrollTop/>
 
     </div>
 
