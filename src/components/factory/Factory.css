@@ -3,14 +3,16 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .card2 {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 75px;
+  min-width: 300px;
 }
 
 .icon-img {
