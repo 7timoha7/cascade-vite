@@ -163,7 +163,7 @@ const TabletopSinks = () => {
         }}>
           {/* Main картинка */}
           <div style={{
-            flex: '0 0 400px',
+            // flex: '0 0 400px',
             maxWidth: '400px',
             width: '100%',
           }}>
@@ -228,7 +228,7 @@ const TabletopSinks = () => {
         }}>
           {/* Main картинка */}
           <div style={{
-            flex: '0 0 400px',
+            // flex: '0 0 400px',
             maxWidth: '400px',
             width: '100%',
           }}>
@@ -294,7 +294,7 @@ const TabletopSinks = () => {
         }}>
           {/* Main картинка */}
           <div style={{
-            flex: '0 0 400px',
+            // flex: '0 0 400px',
             maxWidth: '400px',
             width: '100%',
           }}>
@@ -359,7 +359,7 @@ const TabletopSinks = () => {
         }}>
           {/* Main картинка */}
           <div style={{
-            flex: '0 0 400px',
+            // flex: '0 0 400px',
             maxWidth: '400px',
             width: '100%',
           }}>
