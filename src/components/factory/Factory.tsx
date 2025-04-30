@@ -75,7 +75,7 @@ const Factory = () => {
                  style={{
                    display: 'flex',
                    flexDirection: 'column',
-                   alignItems: 'flex-start',
+                   alignItems: 'center',
                    width: '100%'
                  }}>
               <div className={'card2'} style={{marginBottom: '20px'}}>
