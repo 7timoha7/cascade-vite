@@ -93,10 +93,14 @@ const OurProducts = () => {
               }}>
                 <div
                   style={{
-                    display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', fontSize: '12px', gap: '15px',
+                    display: 'flex',
+                    justifyContent: !isMobile ? 'space-around' : 'space-between',
+                    flexWrap: 'wrap',
+                    fontSize: '12px',
+                    gap: !isMobile ? '8px' : '15px',
                     padding: '20px'
                   }}>
-                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '130px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon1} alt="cascade-technologies"/>
                     </div>
@@ -108,7 +112,7 @@ const OurProducts = () => {
                       безопасно, тихо и удобно
                     </p>
                   </div>
-                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '130px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon2} alt="cascade-technologies"/>
                     </div>
@@ -120,7 +124,7 @@ const OurProducts = () => {
                       и беспрепятственным
                     </p>
                   </div>
-                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '130px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon3} alt="cascade-technologies"/>
                     </div>
@@ -131,7 +135,7 @@ const OurProducts = () => {
                     </p>
                   </div>
 
-                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '130px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon4} alt="cascade-technologies"/>
                     </div>
@@ -143,7 +147,7 @@ const OurProducts = () => {
                       блеск и чистоту
                     </p>
                   </div>
-                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '130px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon5} alt="cascade-technologies"/>
                     </div>
@@ -158,7 +162,7 @@ const OurProducts = () => {
 
                     </p>
                   </div>
-                  <div style={{maxWidth: !isMobile ? '135px' : '180px'}}>
+                  <div style={{maxWidth: !isMobile ? '130px' : '180px'}}>
                     <div style={{textAlign: 'center'}}>
                       <img src={technologiesIcon6} alt="cascade-technologies"/>
                     </div>
