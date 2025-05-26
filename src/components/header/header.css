@@ -3,6 +3,10 @@
   color: black;
 }
 
+.link-header:hover {
+  color: #939393;
+}
+
 .title {
   font-size: 36px;
   padding: 15px 50px;

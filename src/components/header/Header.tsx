@@ -40,7 +40,7 @@ const Header = () => {
           borderBottom: '1px solid #6F7682',
           paddingRight: '5px',
           paddingLeft: '20px',
-          fontSize: fontSizeNav ? '12px' : '9px',
+          fontSize: fontSizeNav ? '20px' : '10px',
         }}>
           <li>
             <a className={'link-header'} href="#about-us">О НАС</a>
@@ -53,7 +53,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <a href="#" style={{margin: 0}}>
+      <a href="#" style={{margin: 0, paddingRight: '10px'}}>
         <img style={{maxWidth: fontSizeNav ? '179px' : '120px'}} src={logo} alt="cascade.kg"/>
       </a>
     </div>

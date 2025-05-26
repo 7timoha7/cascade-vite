@@ -8,7 +8,7 @@ const Footer = () => {
       <footer style={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         padding: '50px 20px',
       }}>
         <p style={{
